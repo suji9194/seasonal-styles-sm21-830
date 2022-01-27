@@ -47,6 +47,9 @@
 			}
 		nav a:hover{
 			text-decoration: none;
+		}
+		h3 {
+			text-align: center;
 		}	
     </style>
    
@@ -91,9 +94,7 @@
 		<p>
 		Polaroid iPhone plaid, Pitchfork cornhole Shoreditch paleo. Hashtag keytar chia scenester Pinterest, semiotics tousled food truck. YOLO scenester deep v, taxidermy paleo quinoa McSweeney's Carles VHS mustache Williamsburg gluten-free readymade cold-pressed. Truffaut Thundercats Schlitz, listicle organic Brooklyn paleo squid asymmetrical readymade migas gluten-free Austin. Etsy Wes Anderson 8-bit retro, polaroid synth paleo banh mi before they sold out Vice. Bushwick fap Intelligentsia, whatever Etsy High Life Kickstarter migas retro Banksy YOLO Carles yr raw denim. Gluten-free fixie taxidermy pop-up, actually Kickstarter flannel put a bird on it master cleanse.
 		</p>
-		<p>
-		Text provided by <a href="http://hipsum.co/" target="_blank">Hipster Ipsum</a>
-		</p>
+		
      </main>
     <footer>
       <small>&copy; 2013, All Rights Reserved ~
@@ -104,8 +105,8 @@
     <!-- END Footer -->
 	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	$("document").ready(function(){
-		$('#dateForm').submit(function(e){//handle form submission event
+	//$("document").ready(function(){
+		/**$('#dateForm').submit(function(e){//handle form submission event
             e.preventDefault();//stop default submission
 			var datetext = $('input[name=dateField]').val();//grab data from textbox
 			var formDate = new Date(datetext);//create a date from form input
@@ -117,8 +118,25 @@
 			}else{
 				alert(datetext + " is in the past!");
 			}
-		});
-	});
+		
+			function getSeason() {
+			month = document.forms.date.month.value.toLowerCase()+",";
+			winter = 'dec,december,jan,january,feb,february,12,1,2,';
+			spring = 'mar,march,apr,april,may,3,4,5,';
+			summer = 'jun,june,jul,july,aug,august,6,7,8,';
+			fall = 'sep,september,oct,october,nov,november,9,10,11,';
+			season = 'unknown';
+			if (winter.indexOf(month) != -1) {
+				season = 'winter';
+			} else if (spring.indexOf(month) != -1) {
+				season = 'spring';
+			} else if (summer.indexOf(month) != -1) {
+				season = 'summer';
+			} else if (fall.indexOf(month) != -1) {
+				season = 'fall';
+			}
+			alert(season);
+			**/
     </script>
 	
 </body>
